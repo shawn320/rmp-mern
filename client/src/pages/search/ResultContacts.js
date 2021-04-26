@@ -14,7 +14,7 @@ const ResultContacts = (props) => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/contacts")
+      .get("/contacts")
       .then((res) => {
         setContacts(res.data);
       })

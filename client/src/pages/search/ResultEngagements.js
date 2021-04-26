@@ -14,7 +14,7 @@ const ResultEngagement = (props) => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/engagements")
+      .get("/engagements")
       .then((res) => {
         setEngagements(res.data);
         console.log(res.data);

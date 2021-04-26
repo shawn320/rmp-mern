@@ -46,7 +46,7 @@ const EngagementForm = () => {
       contacts: result.contacts.concat(contactCards),
     }));
     axios
-      .get("http://localhost:5000/contacts")
+      .get("/contacts")
       .then((res) => {
         setContacts(res.data);
       })

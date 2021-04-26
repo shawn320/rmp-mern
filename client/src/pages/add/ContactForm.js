@@ -31,7 +31,7 @@ const ContactForm = () => {
     website: "",
   });
 
-  const [contacts, setContacts] = useState(initialFormData);
+  // const [contacts, setContacts] = useState(initialFormData);
   const [submitted, setSubmit] = useState(false);
   let history = useHistory();
 
@@ -51,7 +51,7 @@ const ContactForm = () => {
 
   const onSubmit = (data) => {
     axios
-      .post("http://localhost:5000/add/contact", data)
+      .post("/add/contact", data)
       .then((res) => {
         console.log("result: ", res.data);
       })
