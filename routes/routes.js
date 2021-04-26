@@ -25,7 +25,7 @@ router.route("/engagements").get(async (req, res) => {
 
 // Save contact
 router.route("/add/contact").post((req, res) => {
-  req.socket.setTimeout(1000 * 60 * 10);
+  // req.socket.setTimeout(1000 * 60 * 10);
   const contacts = new Contact({
     type: req.body.type,
     name: req.body.name,
@@ -55,7 +55,7 @@ router.route("/add/contact").post((req, res) => {
 
 // Save engagement
 router.route("/add/engagement").post((req, res) => {
-  req.socket.setTimeout(1000 * 60 * 10);
+  // req.socket.setTimeout(1000 * 60 * 10);
   const engagements = new Engagement({
     subject: req.body.subject,
     type: req.body.type,
