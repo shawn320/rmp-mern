@@ -3,6 +3,7 @@ const router = express.Router();
 const Contact = require("../models/contact");
 const Engagement = require("../models/engagement");
 
+// Fetch all contacts
 router.route("/contacts").get(async (req, res) => {
   const contacts = await Contact.find({});
   try {
@@ -12,6 +13,7 @@ router.route("/contacts").get(async (req, res) => {
   }
 });
 
+// Fetch all engagements
 router.route("/engagements").get(async (req, res) => {
   const engagements = await Engagement.find({});
   try {
@@ -21,6 +23,7 @@ router.route("/engagements").get(async (req, res) => {
   }
 });
 
+// Save contact
 router.route("/add/contact").post((req, res) => {
   req.socket.setTimeout(1000 * 60 * 10);
   const contacts = new Contact({
@@ -50,6 +53,7 @@ router.route("/add/contact").post((req, res) => {
   });
 });
 
+// Save engagement
 router.route("/add/engagement").post((req, res) => {
   req.socket.setTimeout(1000 * 60 * 10);
   const engagements = new Engagement({
