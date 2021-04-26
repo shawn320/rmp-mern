@@ -12,7 +12,7 @@ The page will reload if you make edits.
 You will also see any lint errors in the console.
 
 ### Deployment
-This app is deployed to Heroku
+This project is deployed to Heroku:
 https://rmp-mern.herokuapp.com/
 
 ### Todo List:
