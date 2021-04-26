@@ -10,10 +10,6 @@
     "start": "nodemon server.js",
     "client": "cd client && npm start"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/shawn320/rmp-rest.git"
-  },
   "author": "",
   "license": "ISC",
   "bugs": {
