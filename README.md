@@ -28,4 +28,4 @@ https://rmp-mern.herokuapp.com/
 - sometimes contact information is missing after submit the form
 - Tag is not added when press enter key
 - cannot GET message appears when refresh page (deployment)
-- fail to load contact and engagement result (deployment)
+- fail to load contact and engagement result in deployment (fixed)
