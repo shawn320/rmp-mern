@@ -1,0 +1,32 @@
+.columns {
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+}
+#fLinks li::before {
+  content: "•";
+  margin-right: 0.7em;
+}
+.container-links {
+  @apply px-4;
+}
+.glyphicon {
+  position: relative;
+  display: inline-block;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.glyphicon-chevron-up::after {
+  content: "^";
+}
+html {
+  scroll-behavior: smooth;
+}
+@media (min-width: 1280px) {
+  #fLinks li {
+    margin-left: 15px;
+  }
+  #fLinks li:first-child:before {
+    content: " ";
+  }
+}
