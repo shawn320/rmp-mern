@@ -19,7 +19,7 @@ const Header = (props) => {
   } = props;
 
   return (
-    <div className="p-4 m-auto w-full">
+    <div className="py-4 m-auto w-full">
       <div className="flex w-full h-full">
         <span className="flex w-full justify-start">
           <a href={officialPage}>

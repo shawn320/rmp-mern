@@ -19,6 +19,13 @@ const Main = ({ location }) => {
   const [t, i18n] = useTranslation("common");
   let history = useHistory();
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <div>
       <Header
@@ -35,7 +42,7 @@ const Main = ({ location }) => {
         dashboardText={t("header.dashboard")}
         logoutText={t("header.logout")}
         userAlt={t("header.personIcon")}
-        goHome={() => history.push("/search")}
+        goHome={() => history.push("/search/engagement")}
       />
       <Redirect from="/" to="/search" />
       {!location.pathname.startsWith("/viewContact") &&
@@ -60,13 +67,20 @@ const Main = ({ location }) => {
 
       <Footer
         textSocial={t("footer.social")}
+        linkSocial={t("footer.linkSocial")}
         textMobile={t("footer.mobile")}
+        linkMobile={t("footer.linkMobile")}
         textAbout={t("footer.mobile")}
+        linkAbout={t("footer.linkAbout")}
         textTerms={t("footer.terms")}
+        linkTerms={t("footer.linkTerms")}
         textPrivacy={t("footer.terms")}
+        linkPrivacy={t("footer.linkPrivacy")}
         textDTS={t("footer.dts")}
+        linkDTS={t("footer.linkDTS")}
         textTop={t("footer.top")}
         footerSymbol={t("footer.symbol")}
+        toTop={scrollToTop}
       />
     </div>
   );

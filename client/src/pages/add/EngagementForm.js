@@ -243,36 +243,38 @@ const EngagementForm = () => {
             </span>
           )} */}
         </div>
-        <Input icon={star} labelText={t("engagement.type")}>
-          <select
-            name="type"
-            className="h-12 w-96 border-2 border-gray-300 text-sm text-gray-700 focus:outline-none p-2 px-4"
-            onChange={changeHandler}
-            value={engagements.type}
-          >
-            <option>{t("engagementTypes.one")}</option>
-            <option>{t("engagementTypes.Conference")}</option>
-            <option>{t("engagementTypes.ConferenceCall")}</option>
-            <option>{t("engagementTypes.Workshop")}</option>
-            <option>{t("engagementTypes.Webinar")}</option>
-            <option>{t("engagementTypes.PhoneCall")}</option>
-            <option>{t("engagementTypes.CommitteeMeeting")}</option>
-            <option>{t("engagementTypes.WorkingGroup")}</option>
-            <option>{t("engagementTypes.SeniorManagementBriefing")}</option>
-            <option>{t("engagementTypes.MinisterOfficeBriefing")}</option>
-            <option>{t("engagementTypes.ScrumSprint")}</option>
-            <option>{t("engagementTypes.Advisory")}</option>
-          </select>
-        </Input>
-        {/* {errors.type && (
+        <div className="mb-6">
+          <Input icon={star} labelText={t("engagement.type")}>
+            <select
+              name="type"
+              className="h-12 w-96 border-2 border-gray-300 text-sm text-gray-700 focus:outline-none p-2 px-4"
+              onChange={changeHandler}
+              value={engagements.type}
+            >
+              <option>{t("engagementTypes.one")}</option>
+              <option>{t("engagementTypes.Conference")}</option>
+              <option>{t("engagementTypes.ConferenceCall")}</option>
+              <option>{t("engagementTypes.Workshop")}</option>
+              <option>{t("engagementTypes.Webinar")}</option>
+              <option>{t("engagementTypes.PhoneCall")}</option>
+              <option>{t("engagementTypes.CommitteeMeeting")}</option>
+              <option>{t("engagementTypes.WorkingGroup")}</option>
+              <option>{t("engagementTypes.SeniorManagementBriefing")}</option>
+              <option>{t("engagementTypes.MinisterOfficeBriefing")}</option>
+              <option>{t("engagementTypes.ScrumSprint")}</option>
+              <option>{t("engagementTypes.Advisory")}</option>
+            </select>
+          </Input>
+          {/* {errors.type && (
           <span className="text-sm text-red-500">
             {t("contactValidation.required")}
           </span>
         )} */}
+        </div>
       </div>
 
       <div className="md:flex">
-        <div className="mr-2 w-96">
+        <div className="mb-6 mr-2 w-96">
           <Input icon={star} labelText={t("engagement.date")}>
             <input
               name="date"
@@ -288,7 +290,7 @@ const EngagementForm = () => {
             </span>
           )} */}
         </div>
-        <div>
+        <div className="mb-6">
           <Input icon={star} labelText={t("engagement.participants")}>
             <input
               name="numParticipants"
@@ -302,11 +304,11 @@ const EngagementForm = () => {
         </div>
       </div>
 
-      <div className="py-6">
+      <div className="mb-6">
         <Input icon={star} labelText={t("engagement.description")}>
           <textarea
             name="description"
-            className="md:mr-2 md:w-text-area h-36 border-2 border-gray-300 text-sm text-gray-700 focus:outline-none p-2 px-4"
+            className="w-full md:mr-2 md:w-text-area h-36 border-2 border-gray-300 text-sm text-gray-700 focus:outline-none p-2 px-4"
             value={engagements.description}
             onChange={changeHandler}
             type="text"
@@ -371,7 +373,7 @@ const EngagementForm = () => {
         <Input labelText={t("engagement.comments")}>
           <textarea
             name="comments"
-            className="md:mr-2 md:w-text-area h-36 border-2 border-gray-300 text-sm text-gray-700 focus:outline-none p-2 px-4"
+            className="w-full md:mr-2 md:w-text-area h-36 border-2 border-gray-300 text-sm text-gray-700 focus:outline-none p-2 px-4"
             value={engagements.comments}
             onChange={changeHandler}
             type="text"

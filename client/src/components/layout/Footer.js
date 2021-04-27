@@ -19,9 +19,10 @@ const Footer = (props) => {
     textDTS,
     textTop,
     footerSymbol,
+    toTop,
   } = props;
   return (
-    <div className="leading-10 bg-white p-4 m-auto w-full">
+    <div className="leading-10 bg-white py-4 m-auto w-full">
       <FooterBackground />
       <div className="container-links">
         <nav className="py-8 xl:flex xl:mx-10 font-body text-sm">
@@ -63,7 +64,10 @@ const Footer = (props) => {
           <div className="flex justify-between xl:inline-block xl:mx-auto">
             <div className="pt-6 pl-2 xl:hidden">
               <a href="#nav-top-page">
-                <span className="glyphicon glyphicon-chevron-up">
+                <span
+                  className="glyphicon glyphicon-chevron-up"
+                  onClick={toTop}
+                >
                   {textTop}
                 </span>
               </a>
