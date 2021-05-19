@@ -1,10 +1,12 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { NavLink, useLocation, useHistory } from "react-router-dom";
 import { BsChevronRight } from "react-icons/bs";
+import Popup from "reactjs-popup";
 import ContactField from "../../components/common/Field";
 import EngagementCard from "../..//components/common/EngagementCard";
 import Button from "../../components/default/Button";
+import EditContact from "../edit/EditContact";
 
 const ViewContact = (_) => {
   const { t } = useTranslation("common");
@@ -16,7 +18,7 @@ const ViewContact = (_) => {
   });
 
   return (
-    <div className="bg-white text-black text-base font-body mt-8 px-12 xl:mx-16">
+    <div className="bg-white text-black text-base font-body mt-8 px-12 xl:mx-16 z-0">
       <h1 className="text-rmp-md-blue text-left tracking-wide font-bold text-xl pt-4 pb-6">
         {t("contact.contact")}
       </h1>
@@ -202,10 +204,22 @@ const ViewContact = (_) => {
           classes="bg-gray-300 shadow text-black mt-6 py-2 px-4 rounded w-36 focus:outline-none hover:bg-gray-400 hover:text-white mr-2"
           clicked={() => history.push("/search/engagement")}
         />
-        <Button
+        {/* <Button
           text={t("contact.edit")}
           classes="bg-rmp-md-blue  shadow text-white mt-6 py-2 px-4 rounded w-36 focus:outline-none hover:bg-rmp-dk-blue"
-        />
+        /> */}
+        <Popup
+          trigger={
+            <button className="bg-rmp-md-blue shadow text-white mt-6 py-2 px-4 rounded w-36 focus:outline-none hover:bg-rmp-dk-blue">
+              {t("contact.edit")}
+            </button>
+          }
+          position="right center"
+        >
+          <div>
+            <EditContact />
+          </div>
+        </Popup>
       </div>
     </div>
   );
